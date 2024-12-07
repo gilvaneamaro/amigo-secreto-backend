@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: amigosecretodb
+    volumes:
+      - ./docker/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - amigosecreto_network
+
+networks:
+  amigosecreto_network:
+    driver: bridge
