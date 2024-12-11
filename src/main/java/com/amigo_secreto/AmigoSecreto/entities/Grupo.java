@@ -6,23 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@Table(name = "lista_desejo_tb")
+@Table(name="participante_lista_tb")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ListaDeDesejos {
+public class Grupo {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
-
-    private UUID participanteId;
-
-    private Set<String> listaDeDesejos;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private UUID idGrupo;
 }

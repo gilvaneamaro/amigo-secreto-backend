@@ -1,0 +1,9 @@
+com\amigo_secreto\AmigoSecreto\repositories\SorteioRepository.class
+com\amigo_secreto\AmigoSecreto\repositories\ParticipanteRepository.class
+com\amigo_secreto\AmigoSecreto\controllers\SorteioController.class
+com\amigo_secreto\AmigoSecreto\entities\Participante.class
+com\amigo_secreto\AmigoSecreto\entities\Sorteio.class
+com\amigo_secreto\AmigoSecreto\entities\ListaDeDesejos.class
+com\amigo_secreto\AmigoSecreto\services\SorteioService.class
+com\amigo_secreto\AmigoSecreto\entities\Grupo.class
+com\amigo_secreto\AmigoSecreto\services\ParticipanteService.class

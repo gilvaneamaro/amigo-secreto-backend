@@ -11,7 +11,8 @@ CREATE TABLE lista_desejo_tb (
      lis_item VARCHAR NOT NULL
 );
 
-    CREATE TABLE participante_lista_tb (
+
+CREATE TABLE participante_lista_tb (
     par_id UUID NOT NULL,
     lis_id UUID NOT NULL,
     PRIMARY KEY (par_id, lis_id),
