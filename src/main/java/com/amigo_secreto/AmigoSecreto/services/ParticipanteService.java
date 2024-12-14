@@ -18,7 +18,6 @@ public class ParticipanteService {
 
     @Transactional
     public Participante save(Participante participante) {
-        System.out.println("nome: " + participante.getNome());
         return participanteRepository.save(participante);
     }
 

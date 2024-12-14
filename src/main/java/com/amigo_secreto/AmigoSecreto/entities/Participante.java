@@ -1,6 +1,7 @@
 package com.amigo_secreto.AmigoSecreto.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 import java.util.UUID;
 
 @Entity
@@ -19,6 +20,9 @@ public class Participante {
 
     @Column(name = "par_cpf")
     private String cpf;
+
+    @Column(name = "par_senha")
+    private String senha;
 
     public UUID getId() {
         return id;
@@ -52,13 +56,21 @@ public class Participante {
         this.cpf = cpf;
     }
 
-    public Participante(UUID id, String nome, String email, String cpf) {
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public Participante(UUID id, String nome, String email, String cpf, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
+        this.senha = senha;
     }
 
-    public Participante() {
-    }
+    public Participante() {}
 }
