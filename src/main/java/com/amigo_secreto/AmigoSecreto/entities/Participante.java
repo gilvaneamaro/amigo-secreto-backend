@@ -1,28 +1,37 @@
 package com.amigo_secreto.AmigoSecreto.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
 @Table(name = "participante_tb")
 public class Participante {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "par_id")
     private UUID id;
 
-    @Column(name = "par_nome")
+    @Column(name = "par_nome", nullable = false, length = 100)
     private String nome;
 
-    @Column(name = "par_email")
+    @Column(name = "par_email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "par_cpf")
+    @Column(name = "par_cpf", nullable = false, unique = true, length = 11)
     private String cpf;
 
-    @Column(name = "par_senha")
+    @Column(name="par_senha", nullable = false)
     private String senha;
+
+    @OneToMany(mappedBy = "dono", cascade = CascadeType.ALL)
+    private Set<Grupo> gruposCriados;
+
+    @ManyToMany(mappedBy = "participantes")
+    private Set<Grupo> grupos;
+
 
     public UUID getId() {
         return id;
