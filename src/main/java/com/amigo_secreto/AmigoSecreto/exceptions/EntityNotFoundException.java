@@ -1,4 +1,4 @@
-package com.amigo_secreto.AmigoSecreto;
+package com.amigo_secreto.AmigoSecreto.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

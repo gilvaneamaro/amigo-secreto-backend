@@ -1,6 +1,6 @@
 package com.amigo_secreto.AmigoSecreto.services;
 
-import com.amigo_secreto.AmigoSecreto.EntityNotFoundException;
+import com.amigo_secreto.AmigoSecreto.exceptions.EntityNotFoundException;
 import com.amigo_secreto.AmigoSecreto.entities.Grupo;
 import com.amigo_secreto.AmigoSecreto.repositories.GrupoRepository;
 import jakarta.transaction.Transactional;
